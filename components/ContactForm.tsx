@@ -63,68 +63,77 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          {/* Left Column: Contact Details */}
-          <div className="space-y-8">
-            <div>
-              <span className="text-gold-500 font-bold text-xs uppercase tracking-widest">
-                Partner With Us
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-white mt-2 leading-tight">
-                Request Commercial Samples & Wholesale Terms
-              </h2>
-              <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-                We supply top-tier hotels, diplomatic lounges, and specialty cafes in Addis Ababa with freshly roasted, high-barrier packaged green and roasted beans.
-              </p>
-            </div>
+          {/* Left Column: Contact Details & Info */}
+<div className="space-y-8 text-coffee-950">
+  <div>
+    <span className="text-gold-600 font-bold text-xs uppercase tracking-widest block mb-2">
+      Partner With Us
+    </span>
+    
+    {/* Main Heading - Dark Coffee Color for High Contrast */}
+    <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-coffee-900 leading-tight">
+      Request Commercial Samples & Wholesale Terms
+    </h2>
+    
+    {/* Subtitle Paragraph - Dark Slate for Clear Visibility */}
+    <p className="text-gray-700 text-sm mt-4 leading-relaxed font-normal">
+      We supply top-tier hotels, diplomatic lounges, and specialty cafes in Addis Ababa with freshly roasted, high-barrier packaged green and roasted beans.
+    </p>
+  </div>
 
-            <div className="space-y-6 text-sm border-t border-coffee-800 pt-8">
-              {/* Wholesale Inquiries */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
-                  <i className="fa-solid fa-envelope" />
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
-                    Wholesale Inquiries
-                  </div>
-                  <a href="mailto:wholesale@hararorigins.com" className="text-white font-medium hover:text-gold-400 transition">
-                    wholesale@hararorigins.com
-                  </a>
-                </div>
-              </div>
+  <div className="space-y-6 text-sm border-t border-coffee-200 pt-8">
+    {/* Wholesale Inquiries */}
+    <div className="flex items-start gap-4">
+      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+        <i className="fa-solid fa-envelope text-base" />
+      </div>
+      <div>
+        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+          Wholesale Inquiries
+        </div>
+        <a 
+          href="mailto:wholesale@hararorigins.com" 
+          className="text-coffee-950 font-bold text-base hover:text-gold-600 transition block mt-0.5"
+        >
+          wholesale@hararorigins.com
+        </a>
+      </div>
+    </div>
 
-              {/* Direct Roastery Line */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
-                  <i className="fa-solid fa-phone" />
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
-                    Direct Roastery Line
-                  </div>
-                  <a href="tel:+251911000000" className="text-white font-medium hover:text-gold-400 transition">
-                    +251 911 000 000
-                  </a>
-                </div>
-              </div>
+    {/* Direct Roastery Line */}
+    <div className="flex items-start gap-4">
+      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+        <i className="fa-solid fa-phone text-base" />
+      </div>
+      <div>
+        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+          Direct Roastery Line
+        </div>
+        <a 
+          href="tel:+251911000000" 
+          className="text-coffee-950 font-bold text-base hover:text-gold-600 transition block mt-0.5"
+        >
+          +251 911 000 000
+        </a>
+      </div>
+    </div>
 
-              {/* Headquarters & Facility */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
-                  <i className="fa-solid fa-location-dot" />
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
-                    Headquarters & Roasting Facility
-                  </div>
-                  <p className="text-gray-300">
-                    Industrial Sub-City Zone, Addis Ababa, Ethiopia
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+    {/* Headquarters & Facility */}
+    <div className="flex items-start gap-4">
+      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+        <i className="fa-solid fa-location-dot text-base" />
+      </div>
+      <div>
+        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+          Headquarters & Roasting Facility
+        </div>
+        <p className="text-coffee-900 font-semibold text-sm mt-0.5">
+          Industrial Sub-City Zone, Addis Ababa, Ethiopia
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
           {/* Right Column: Form */}
           <div className="bg-coffee-900 border border-coffee-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
