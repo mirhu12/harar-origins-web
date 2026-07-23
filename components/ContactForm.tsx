@@ -63,7 +63,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          {/* Left Column */}
+          {/* Left Column: Contact Details */}
           <div className="space-y-8">
             <div>
               <span className="text-gold-500 font-bold text-xs uppercase tracking-widest">
@@ -78,6 +78,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             </div>
 
             <div className="space-y-6 text-sm border-t border-coffee-800 pt-8">
+              {/* Wholesale Inquiries */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
                   <i className="fa-solid fa-envelope" />
@@ -92,6 +93,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 </div>
               </div>
 
+              {/* Direct Roastery Line */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
                   <i className="fa-solid fa-phone" />
@@ -106,6 +108,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 </div>
               </div>
 
+              {/* Headquarters & Facility */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-coffee-900 border border-coffee-800 flex items-center justify-center text-gold-500 shrink-0">
                   <i className="fa-solid fa-location-dot" />
@@ -122,7 +125,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Form with High-Contrast Text */}
+          {/* Right Column: Form */}
           <div className="bg-coffee-900 border border-coffee-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               
