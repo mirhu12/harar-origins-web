@@ -10,6 +10,7 @@ interface Article {
   readTime: string;
   excerpt: string;
   icon: string;
+  image?: string;
 }
 
 const articles: Article[] = [
@@ -21,6 +22,7 @@ const articles: Article[] = [
     readTime: '4 min read',
     excerpt: 'Sun-drying on elevated African beds has yielded exceptional natural sweetness this season, with distinct blueberry and dark cocoa cupping scores.',
     icon: 'fa-sun',
+    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop',
   },
   {
     id: 'roasting-for-espresso',
@@ -67,10 +69,19 @@ export default function NewsSection() {
           {articles.map((article) => (
             <article
               key={article.id}
-              className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group overflow-hidden"
             >
               <div>
-                <div className="flex items-center justify-between text-xs text-gray-500 mb-6">
+                {/* Article Image if present */}
+                {article.image && (
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover rounded-2xl mb-4"
+                  />
+                )}
+
+                <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                   <span className="inline-flex items-center gap-2 bg-coffee-50 text-coffee-900 font-semibold px-3 py-1 rounded-full border border-coffee-100">
                     <i className={`fa-solid ${article.icon} text-gold-600`} />
                     {article.category}
