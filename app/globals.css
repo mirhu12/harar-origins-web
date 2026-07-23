@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FDF8F5;
+  color: #231206;
+}
+
+/* Custom Scrollbar for Sleek Premium Feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #231206; /* Dark Coffee Theme Background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A66E38; /* Warm Coffee Tone */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37; /* Accent Gold on Hover */
+}
+
+/* Custom Selection Highlight */
+::selection {
+  background-color: #D4AF37;
+  color: #231206;
+}
+
+/* Hero Gradient & Vignette Overlay Utility */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(35, 18, 6, 0.88) 0%, rgba(35, 18, 6, 0.96) 100%), 
+              url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+/* Glassmorphism & Soft Ambient Glows for Cards */
+.glass-card {
+  background: rgba(35, 18, 6, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.2);
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 12px rgba(243, 198, 35, 0.3);
+}
