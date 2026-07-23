@@ -64,36 +64,35 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Column: Contact Details & Info */}
-<div className="space-y-8 text-coffee-950">
+<div className="space-y-8">
   <div>
     <span className="text-gold-600 font-bold text-xs uppercase tracking-widest block mb-2">
       Partner With Us
     </span>
     
-    {/* Main Heading - Dark Coffee Color for High Contrast */}
-    <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-coffee-900 leading-tight">
+    <h2 className="font-serif text-3xl sm:text-4xl font-extrabold leading-tight" style={{ color: "#1c120c" }}>
       Request Commercial Samples & Wholesale Terms
     </h2>
     
-    {/* Subtitle Paragraph - Dark Slate for Clear Visibility */}
-    <p className="text-gray-700 text-sm mt-4 leading-relaxed font-normal">
+    <p className="text-sm mt-4 leading-relaxed font-normal" style={{ color: "#332218" }}>
       We supply top-tier hotels, diplomatic lounges, and specialty cafes in Addis Ababa with freshly roasted, high-barrier packaged green and roasted beans.
     </p>
   </div>
 
-  <div className="space-y-6 text-sm border-t border-coffee-200 pt-8">
+  <div className="space-y-6 text-sm border-t border-gray-300 pt-8">
     {/* Wholesale Inquiries */}
     <div className="flex items-start gap-4">
-      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+      <div className="w-10 h-10 rounded-xl bg-coffee-950 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
         <i className="fa-solid fa-envelope text-base" />
       </div>
       <div>
-        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+        <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#553a29" }}>
           Wholesale Inquiries
         </div>
         <a 
           href="mailto:wholesale@hararorigins.com" 
-          className="text-coffee-950 font-bold text-base hover:text-gold-600 transition block mt-0.5"
+          className="font-bold text-base hover:underline block"
+          style={{ color: "#1c120c" }}
         >
           wholesale@hararorigins.com
         </a>
@@ -102,16 +101,17 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
     {/* Direct Roastery Line */}
     <div className="flex items-start gap-4">
-      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+      <div className="w-10 h-10 rounded-xl bg-coffee-950 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
         <i className="fa-solid fa-phone text-base" />
       </div>
       <div>
-        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+        <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#553a29" }}>
           Direct Roastery Line
         </div>
         <a 
           href="tel:+251911000000" 
-          className="text-coffee-950 font-bold text-base hover:text-gold-600 transition block mt-0.5"
+          className="font-bold text-base hover:underline block"
+          style={{ color: "#1c120c" }}
         >
           +251 911 000 000
         </a>
@@ -120,14 +120,14 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
     {/* Headquarters & Facility */}
     <div className="flex items-start gap-4">
-      <div className="w-10 h-10 rounded-xl bg-coffee-900 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
+      <div className="w-10 h-10 rounded-xl bg-coffee-950 text-gold-400 flex items-center justify-center shrink-0 shadow-md">
         <i className="fa-solid fa-location-dot text-base" />
       </div>
       <div>
-        <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">
+        <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#553a29" }}>
           Headquarters & Roasting Facility
         </div>
-        <p className="text-coffee-900 font-semibold text-sm mt-0.5">
+        <p className="font-semibold text-sm" style={{ color: "#1c120c" }}>
           Industrial Sub-City Zone, Addis Ababa, Ethiopia
         </p>
       </div>
