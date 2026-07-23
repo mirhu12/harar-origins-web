@@ -28,7 +28,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Format email subject and body
     const subject = encodeURIComponent(
       `Wholesale Coffee Inquiry: ${formData.company || formData.name}`
     );
@@ -47,7 +46,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       `Sent via Harar Origins B2B Web Portal`
     );
 
-    // Trigger user's mail client directly
     window.location.href = `mailto:wholesale@hararorigins.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
@@ -60,13 +58,12 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
   return (
     <section id="contact" className="py-24 bg-coffee-950 text-white relative overflow-hidden">
-      {/* Background Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          {/* Left Column: Direct Info */}
+          {/* Left Column */}
           <div className="space-y-8">
             <div>
               <span className="text-gold-500 font-bold text-xs uppercase tracking-widest">
@@ -125,7 +122,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Form */}
+          {/* Right Column: Interactive Form with High-Contrast Text */}
           <div className="bg-coffee-900 border border-coffee-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               
@@ -142,7 +139,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Abebe Bikila"
-                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition"
+                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition"
                   />
                 </div>
 
@@ -157,7 +154,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="e.g. Grand Hotel Addis"
-                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition"
+                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition"
                   />
                 </div>
               </div>
@@ -175,7 +172,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition"
+                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition"
                   />
                 </div>
 
@@ -190,7 +187,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+251 9..."
-                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition"
+                    className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition"
                   />
                 </div>
               </div>
@@ -204,12 +201,12 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                   name="volume"
                   value={formData.volume}
                   onChange={handleChange}
-                  className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition"
+                  className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition"
                 >
-                  <option value="Under 50kg">Under 50 kg / month (Sample / Small Batch)</option>
-                  <option value="50-100kg">50 – 100 kg / month</option>
-                  <option value="100-250kg">100 – 250 kg / month</option>
-                  <option value="250kg+">250+ kg / month (Commercial Enterprise)</option>
+                  <option value="Under 50kg" className="bg-coffee-950 text-white">Under 50 kg / month (Sample / Small Batch)</option>
+                  <option value="50-100kg" className="bg-coffee-950 text-white">50 – 100 kg / month</option>
+                  <option value="100-250kg" className="bg-coffee-950 text-white">100 – 250 kg / month</option>
+                  <option value="250kg+" className="bg-coffee-950 text-white">250+ kg / month (Commercial Enterprise)</option>
                 </select>
               </div>
 
@@ -225,14 +222,14 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your required roast profiles, packaging preference (1kg valves or green beans), or delivery schedule..."
-                  className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 transition resize-none"
+                  className="w-full bg-coffee-950 border border-coffee-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gold-500 hover:bg-gold-600 text-coffee-950 font-bold text-sm py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full bg-gold-500 hover:bg-gold-600 text-coffee-950 font-bold text-sm py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
