@@ -9,6 +9,7 @@ import WholesaleCalculator from '@/components/WholesaleCalculator';
 import Sourcing from '@/components/Sourcing';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import NewsSection from "@/components/NewsSection";
 import Toast from '@/components/Toast';
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <About />
       <Products />
+      <NewsSection />
       <WholesaleCalculator />
       <Sourcing />
       <ContactForm onSuccess={triggerSuccessToast} />
